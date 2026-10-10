@@ -4,6 +4,8 @@ import { type Server } from "http";
 import { nanoid } from "nanoid";
 import path from "path";
 import { createServer as createViteServer } from "vite";
+import { renderToString } from "react-dom/server";
+import { createElement } from "react";
 import viteConfig from "../../vite.config";
 
 export async function setupVite(app: Express, server: Server) {
@@ -39,7 +41,22 @@ export async function setupVite(app: Express, server: Server) {
         `src="/src/main.tsx?v=${nanoid()}"`
       );
       const page = await vite.transformIndexHtml(url, template);
-      res.status(200).set({ "Content-Type": "text/html" }).end(page);
+      if (url.split("?")[0] !== "/") {
+        res
+          .status(404)
+          .set({ "Content-Type": "text/html", "X-Robots-Tag": "noindex" })
+          .end(
+            "<!doctype html><html lang='en'><head><title>Page not found | CreatorYield</title></head><body><h1>This page isn’t here.</h1><a href='/'>Back to CreatorYield</a></body></html>"
+          );
+        return;
+      }
+      const { default: Home } = await vite.ssrLoadModule("/src/pages/Home.tsx");
+      res
+        .status(200)
+        .set({ "Content-Type": "text/html" })
+        .end(
+          page.replace("<!--app-html-->", renderToString(createElement(Home)))
+        );
     } catch (e) {
       vite.ssrFixStacktrace(e as Error);
       next(e);
@@ -60,8 +77,13 @@ export function serveStatic(app: Express) {
 
   app.use(express.static(distPath));
 
-  // fall through to index.html if the file doesn't exist
   app.use("*", (_req, res) => {
-    res.sendFile(path.resolve(distPath, "index.html"));
+    res
+      .status(404)
+      .set("X-Robots-Tag", "noindex")
+      .type("html")
+      .send(
+        "<!doctype html><html lang='en'><head><title>Page not found | CreatorYield</title></head><body><h1>This page isn’t here.</h1><a href='/'>Back to CreatorYield</a></body></html>"
+      );
   });
 }
