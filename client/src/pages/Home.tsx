@@ -519,10 +519,8 @@ export default function Home() {
                   <ArrowUpRight size={23} />
                 </span>
                 <h3>
-                  Always
-                  <br />
-                  in your
-                  <br />
+                  Always <br />
+                  in your <br />
                   <em>favour.</em>
                 </h3>
                 <p>

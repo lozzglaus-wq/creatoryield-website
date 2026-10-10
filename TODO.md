@@ -16,3 +16,9 @@ The user asked to redo the original site with the clearer commercial explanation
 The existing managed React, Vite, Express and MySQL project and lead capture are retained. The prior version is saved in canonical Git history. No publication is requested. Only the preview service needed to view the revised website is running.
 
 TypeScript checks, all 14 tests and the production build passed. Public preview serves the full rendered copy. Focused checks confirmed no horizontal overflow at 320, 390, 768 and 1440 pixel widths, mobile headline spacing, shop category filtering, recommendation details, enquiry dialog opening and closing, mobile navigation and no browser runtime errors. Invalid enquiry input returns HTTP 400. No test lead was written to the shared database.
+
+## Mobile readability correction
+
+- [x] Replace tiny mobile writing with 18px main copy, at least 16px supporting copy and controls, and at least 14px labels and captions. Improve contrast, line height and spacing. Reflow comparison, pricing and example products instead of shrinking text into narrow columns. Preserve the agreed page copy, bold design, desktop appearance and enquiry functionality. Check at phone widths and with enlarged text before saving. No publication is requested.
+
+Verified computed text sizes and no horizontal overflow at 320, 360, 390, 430, 640, 768 and 800 pixels. Main paragraphs, comparison rows and price descriptions are 18px; no visible text falls below 14px. Phone screenshots inspected. At 390px, doubling text size reflows without horizontal scrolling. Desktop typography is unchanged. Example categories, recommendation detail, mobile menu and enquiry dialog remain functional; enquiry inputs are 18px and consent is 16px. TypeScript and production build pass. No database writes or publication performed.
