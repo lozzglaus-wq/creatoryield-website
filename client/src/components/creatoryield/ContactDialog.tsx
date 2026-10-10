@@ -76,7 +76,7 @@ export default function ContactDialog({
               <span className="success-icon">
                 <Check size={28} />
               </span>
-              <Dialog.Title>Your next chapter starts here.</Dialog.Title>
+              <Dialog.Title>Your enquiry is with us.</Dialog.Title>
               <Dialog.Description>
                 Thanks for telling us about your channel. Your enquiry is safely
                 with CreatorYield. We’ll be in touch using the email you shared.
@@ -90,7 +90,7 @@ export default function ContactDialog({
             <>
               <p className="eyebrow">A CONVERSATION, NOT A COMMITMENT</p>
               <Dialog.Title>
-                Let’s build something <em>that’s yours.</em>
+                Tell us about <em>your channel.</em>
               </Dialog.Title>
               <Dialog.Description>
                 Tell us a little about you and your audience. We’ll take a look
