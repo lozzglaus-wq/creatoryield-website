@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowUpRight, Check, MousePointer2, X } from "lucide-react";
+import { ArrowUpRight, Check, ShoppingBag, X } from "lucide-react";
 
 export const productImages = {
   headphones: "/manus-storage/async-images/wFJBgTnqYuqd3DlZKEwciE/image-1.webp",
@@ -7,50 +7,49 @@ export const productImages = {
   coffee: "/manus-storage/async-images/wFJBgTnqYuqd3DlZKEwciE/image-3.webp",
 };
 
-const products = [
+const collections = [
   {
-    id: "helmet",
-    category: "Riding kit",
-    name: "The everyday helmet",
-    note: "A place for the helmet from the channel and its retailer link.",
+    id: "riding",
+    title: "Riding kit",
+    subtitle: "My daily essentials",
     image: "/manus-storage/async-images/mzgi5hxBA75PJkDBV1CK3b/image-1.webp",
-    alt: "Illustrative graphite motorcycle helmet",
-    tag: "ON THE BIKE",
+    alt: "Graphite motorcycle helmet illustrating the riding kit collection",
+    description:
+      "The helmet and riding gear from the channel, together in one collection.",
   },
   {
     id: "gloves",
-    category: "Riding kit",
-    name: "The riding gloves",
-    note: "The familiar riding kit, ready to find after the video.",
+    title: "The gloves",
+    subtitle: "On every ride",
     image: "/manus-storage/async-images/mzgi5hxBA75PJkDBV1CK3b/image-2.webp",
-    alt: "Illustrative brown leather riding gloves",
-    tag: "EVERY RIDE",
+    alt: "Brown leather gloves illustrating the riding gloves collection",
+    description:
+      "The familiar gloves from the rides, with space for Ted’s notes and retailer links.",
   },
   {
-    id: "tools",
-    category: "Garage",
-    name: "The garage essentials",
-    note: "The tools from the garage videos, kept together in one collection.",
+    id: "garage",
+    title: "The garage",
+    subtitle: "Tools I reach for",
     image: "/manus-storage/async-images/mzgi5hxBA75PJkDBV1CK3b/image-3.webp",
-    alt: "Illustrative motorcycle tool roll",
-    tag: "IN THE GARAGE",
+    alt: "Motorcycle tool roll illustrating the garage collection",
+    description:
+      "The tools from the garage videos, easy to find long after the upload.",
   },
 ];
 
 export default function Storefront() {
-  const [category, setCategory] = useState("All picks");
   const [selected, setSelected] = useState<string | null>(null);
-  const visible =
-    category === "All picks"
-      ? products
-      : products.filter(item => item.category === category);
-  const product = products.find(item => item.id === selected);
+  const collection = collections.find(item => item.id === selected);
 
   return (
-    <div className="store-scene bike-store" id="example-shop">
+    <div
+      className="store-scene original-store"
+      id="example-shop"
+      aria-label="Illustrative concept of Triump Ted’s creator owned shop"
+    >
+      <div className="scene-backdrop" aria-hidden="true" />
       <div className="scene-note">
-        <MousePointer2 size={13} aria-hidden="true" />
-        EXPLORE AN EXAMPLE SHOP
+        BUILT AROUND YOUR WORLD <ArrowUpRight size={16} aria-hidden="true" />
       </div>
       <section className="store-window" aria-labelledby="ted-shop-title">
         <div className="store-toolbar">
@@ -59,7 +58,7 @@ export default function Storefront() {
             <i />
             <i />
           </span>
-          <p>YOUR NAME. YOUR DOMAIN.</p>
+          <p>YOUR OWN CORNER OF THE INTERNET</p>
           <span className="toolbar-dot" aria-hidden="true" />
         </div>
         <div className="store-content">
@@ -67,78 +66,63 @@ export default function Storefront() {
             <span className="store-wordmark">
               Triump Ted<span>the riding collection.</span>
             </span>
-            <span className="store-curated">
-              <Check size={12} aria-hidden="true" />
-              CREATOR CURATED
-            </span>
+            <ShoppingBag size={20} strokeWidth={1.3} aria-hidden="true" />
           </div>
           <div className="store-heading">
+            <p>RIDDEN. TRUSTED. SHARED.</p>
             <h2 id="ted-shop-title">
               You’ve seen it on my channel.
               <br />
               <em>It’s in my shop.</em>
             </h2>
-            <p className="bike-support">
+            <span>
               These links support my channel{" "}
               <strong>at no extra cost to you.</strong>
-            </p>
+            </span>
           </div>
-          <div
-            className="store-tabs"
-            role="group"
-            aria-label="Triump Ted shop categories"
-          >
-            {["All picks", "Riding kit", "Garage"].map(tab => (
+          <div className="store-products">
+            {collections.map((item, index) => (
               <button
-                key={tab}
-                aria-pressed={category === tab}
-                onClick={() => {
-                  setCategory(tab);
-                  setSelected(null);
-                }}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
-          <div
-            className={`store-products ${visible.length === 1 ? "single-product" : ""}`}
-          >
-            {visible.map(item => (
-              <button
-                className="store-product"
+                className={`store-product ${index === 0 ? "store-product-main" : ""}`}
                 key={item.id}
-                onClick={() => setSelected(item.id)}
-                aria-label={`View example recommendation: ${item.name}`}
+                onClick={() =>
+                  setSelected(selected === item.id ? null : item.id)
+                }
+                aria-label={`Explore example collection: ${item.title}`}
                 aria-expanded={selected === item.id}
               >
-                <div className="store-product-image">
-                  <img
-                    src={item.image}
-                    alt={item.alt}
-                    width="240"
-                    height="240"
-                  />
-                  <span>
-                    <ArrowUpRight size={16} aria-hidden="true" />
-                  </span>
+                <img
+                  src={item.image}
+                  alt={item.alt}
+                  width={index === 0 ? 420 : 280}
+                  height={index === 0 ? 420 : 280}
+                />
+                <div>
+                  <span>{item.title}</span>
+                  <ArrowUpRight size={14} aria-hidden="true" />
                 </div>
-                <span className="store-product-tag">{item.tag}</span>
-                <strong>{item.name}</strong>
+                <p>{item.subtitle}</p>
               </button>
             ))}
           </div>
-          {product && (
-            <div className="store-detail" role="status">
+          {collection && (
+            <div
+              className="original-store-detail"
+              role="region"
+              aria-label={`${collection.title} example details`}
+              aria-live="polite"
+            >
               <button
                 onClick={() => setSelected(null)}
-                aria-label="Close example recommendation"
+                aria-label="Close collection details"
               >
-                <X size={16} />
+                <X size={18} />
               </button>
-              <strong>{product.name}</strong>
-              <p>{product.note}</p>
-              <span>Illustrative example. No retailer link is active.</span>
+              <strong>{collection.title}</strong>
+              <p>{collection.description}</p>
+              <span>
+                Illustrative collection. No purchase links are active.
+              </span>
             </div>
           )}
           <div className="store-bottom">
@@ -147,17 +131,15 @@ export default function Storefront() {
         </div>
       </section>
       <div className="owner-tag">
-        <span>
-          <Check size={17} aria-hidden="true" />
+        <span className="owner-tag-icon">
+          <Check size={18} aria-hidden="true" />
         </span>
-        <p>
-          Built by us.<strong>Owned by you.</strong>
-        </p>
-        <ArrowUpRight size={21} aria-hidden="true" />
+        <div>
+          <strong>Yours, by design.</strong>
+          <span>Your shop. Your audience. Your income.</span>
+        </div>
       </div>
-      <p className="store-example-note">
-        ILLUSTRATIVE SHOP. NOT A LIVE PRODUCT OFFER.
-      </p>
+      <p className="original-concept-label">AN ILLUSTRATIVE CREATOR SHOP</p>
     </div>
   );
 }

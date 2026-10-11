@@ -1,204 +1,418 @@
-/* The original editorial shop illustration, adapted for motorbike kit. */
-.bike-store .store-content {
-  padding: 22px 24px 19px;
+/* Restore the first CreatorYield shop composition, not the later catalogue layouts. */
+.original-store {
+  width: 52%;
+  max-width: 585px;
+  position: relative;
+  padding: 40px 0 39px;
+  isolation: isolate;
 }
-.bike-store .store-wordmark {
-  font-size: 31px;
-  color: #2c442c;
+.original-store .scene-backdrop {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  right: -18px;
+  background: #eeeee4;
+  border-radius: 45% 45% 2px 2px;
+  z-index: -1;
 }
-.bike-store .store-wordmark > span {
+.original-store .scene-backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(#747c5914 0.7px, transparent 0.7px);
+  background-size: 5px 5px;
+  border-radius: inherit;
+}
+.original-store .scene-note {
+  position: absolute;
+  top: 11px;
+  right: 18px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
   font-size: 10px;
-  color: #61714f;
-}
-.bike-store .store-curated {
-  font-size: 9px;
-  color: #586d41;
-}
-.bike-store .store-toolbar p {
-  font-size: 10px;
-  color: #61714f;
-}
-.bike-store .store-heading {
-  padding-block: 24px 18px;
-}
-.bike-store .store-heading h2 {
-  font-size: 32px;
-  line-height: 1.1;
-}
-.bike-store .store-heading h2 em {
-  color: #6b844c;
-}
-.bike-store .store-heading .bike-support {
-  margin: 13px 0 0;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.65;
-  letter-spacing: 0;
-  color: #576849;
-  max-width: 400px;
-}
-.bike-support strong {
-  font-weight: 500;
-  color: #39532d;
-}
-.bike-store .store-tabs {
-  margin-bottom: 16px;
-}
-.bike-store .store-tabs button {
-  font-size: 12px;
-  padding: 7px 11px;
-  color: #586c42;
-}
-.bike-store .store-tabs button[aria-pressed="true"] {
-  color: #354c23;
-}
-.bike-store .store-product img {
-  object-fit: contain;
-  background: #f0ebdf;
-}
-.bike-store .store-product-tag {
-  font-size: 9px;
-  color: #62734e;
-}
-.bike-store .store-product > strong {
-  font-size: 13px;
-  line-height: 1.45;
-}
-.bike-store .store-products {
-  min-height: 0;
-  align-items: flex-start;
-}
-.bike-store .store-bottom {
-  font-size: 11px;
-  color: #576c43;
+  letter-spacing: 0.055em;
   line-height: 1.6;
+  color: #5d6b4c;
+  margin: 0;
 }
-.bike-store .store-detail strong {
-  font-size: 14px;
+.original-store .store-window {
+  border: 1px solid #c6cabd;
+  background: #fdfcf8;
+  border-radius: 8px;
+  box-shadow:
+    0 22px 44px #41453314,
+    0 4px 8px #41453307;
+  position: relative;
+  transform: rotate(-3deg);
+  overflow: hidden;
 }
-.bike-store .store-detail p {
+.original-store .store-toolbar {
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 13px;
+  border-bottom: 1px solid #e2e3d8;
+  background: #f8f8f1;
+}
+.original-store .store-toolbar p {
+  font-size: 9px;
+  line-height: 1.5;
+  letter-spacing: 0.055em;
+  color: #69735e;
+}
+.original-store .store-toolbar i {
+  background: #c9cdc0;
+}
+.original-store .store-content {
+  padding: 20px 24px 18px;
+}
+.original-store .store-nav {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  color: #586947;
+}
+.original-store .store-nav > svg {
+  flex-shrink: 0;
+}
+.original-store .store-wordmark {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 29px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #434e36;
+}
+.original-store .store-wordmark > span {
+  display: block;
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  line-height: 1.6;
+  margin-top: 4px;
+  letter-spacing: 0.01em;
+  color: #61714f;
+}
+.original-store .store-heading {
+  padding: 25px 0 23px;
+}
+.original-store .store-heading > p {
+  font-size: 10px;
+  letter-spacing: 0.09em;
+  line-height: 1.6;
+  color: #697756;
+  margin-bottom: 9px;
+}
+.original-store .store-heading h2 {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 37px;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  color: #404a34;
+}
+.original-store .store-heading h2 em {
+  color: #697e49;
+}
+.original-store .store-heading > span {
+  display: block;
   font-size: 13px;
-  color: #4f6340;
+  line-height: 1.6;
+  color: #63714f;
+  margin-top: 12px;
 }
-.bike-store .store-detail > span {
+.original-store .store-heading > span strong {
+  font-weight: 500;
+  color: #40572e;
+}
+.original-store .store-products {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 11px;
+  min-height: 0;
+}
+.original-store .store-product {
+  display: block;
+  flex: 1 1 0;
+  width: auto;
+  min-width: 0;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: #434e36;
+}
+.original-store .store-product-main {
+  flex: 1.57 1 0;
+}
+.original-store .store-product img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 2px;
+  background: #e8e1d5;
+  transition: transform 0.25s;
+}
+.original-store .store-product:hover img {
+  transform: translateY(-3px);
+}
+.original-store .store-product > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5px;
+  margin-top: 10px;
+  color: #484f3c;
+}
+.original-store .store-product > div > span {
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 500;
+  min-width: 0;
+}
+.original-store .store-product > div > svg {
+  flex-shrink: 0;
+  width: 13px;
+  height: 13px;
+  margin-top: 3px;
+}
+.original-store .store-product > p {
   font-size: 11px;
-  color: #5a7046;
+  line-height: 1.6;
+  margin-top: 3px;
+  color: #68745b;
+}
+.original-store .store-bottom {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #e3e4d9;
+  margin-top: 20px;
+  padding-top: 10px;
+  gap: 10px;
+}
+.original-store .store-bottom > span {
+  font-size: 11px;
+  line-height: 1.6;
+  letter-spacing: 0;
+  color: #667453;
+}
+.original-store .owner-tag {
+  position: absolute;
+  right: -18px;
+  bottom: 8px;
+  background: #fcfcf6;
+  border: 1px solid #dce0d1;
+  box-shadow: 0 6px 25px #363f2620;
+  padding: 15px 20px 15px 14px;
+  border-radius: 5px;
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  transform: rotate(2deg);
+  margin: 0;
+}
+.original-store .owner-tag-icon {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 0;
+  color: #667448;
+  background: #e8eddd;
+  flex-shrink: 0;
+}
+.original-store .owner-tag strong {
+  display: block;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #49573b;
+}
+.original-store .owner-tag div > span {
+  font-size: 11px;
+  line-height: 1.6;
+  color: #687657;
+  display: block;
+  margin-top: 2px;
+}
+.original-concept-label {
+  margin: 16px 0 0 9px;
+  font-size: 10px;
+  line-height: 1.6;
+  letter-spacing: 0.055em;
+  color: #c0cdaa;
+}
+.original-store-detail {
+  position: relative;
+  padding: 16px 44px 16px 16px;
+  margin-top: 18px;
+  border: 1px solid #d1dbbf;
+  background: #eff2e7;
+}
+.original-store-detail > button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: 0;
+  color: #52653f;
+}
+.original-store-detail > strong {
+  font-size: 16px;
+  font-weight: 500;
+}
+.original-store-detail p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #52653f;
+  margin-top: 5px;
+}
+.original-store-detail > span {
+  display: block;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #657851;
+  margin-top: 8px;
 }
 
 @media (max-width: 800px) {
-  .bike-store .store-content {
+  .original-store {
+    width: 100%;
+    max-width: 540px;
+    padding: 36px 0 48px;
+    margin: 12px auto 0;
+  }
+  .original-store .scene-backdrop {
+    left: 10px;
+    right: -7px;
+  }
+  .original-store .scene-note {
+    top: 4px;
+    right: 8px;
+    font-size: 14px;
+    gap: 8px;
+  }
+  .original-store .scene-note > svg {
+    display: none;
+  }
+  .original-store .store-window {
+    transform: none;
+  }
+  .original-store .store-toolbar {
+    padding: 9px 12px;
+  }
+  .original-store .store-toolbar p {
+    font-size: 14px;
+    letter-spacing: 0.015em;
+  }
+  .original-store .store-toolbar > span {
+    display: none;
+  }
+  .original-store .store-content {
     padding: 20px 18px 18px;
   }
-  .bike-store .store-nav {
-    gap: 12px;
-  }
-  .bike-store .store-wordmark {
+  .original-store .store-wordmark {
     font-size: 32px;
   }
-  .bike-store .store-wordmark > span {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-top: 6px;
-  }
-  .bike-store .store-curated {
-    display: none;
-  }
-  .bike-store .store-toolbar {
-    padding: 10px 12px;
-  }
-  .bike-store .store-toolbar p {
+  .original-store .store-wordmark > span {
     font-size: 14px;
   }
-  .bike-store .store-heading {
-    padding-block: 20px 18px;
+  .original-store .store-heading {
+    padding: 21px 0 23px;
   }
-  .bike-store .store-heading h2 {
-    font-size: clamp(29px, 7.8vw, 36px);
-    line-height: 1.1;
+  .original-store .store-heading > p {
+    font-size: 14px;
+    letter-spacing: 0.03em;
   }
-  .bike-store .store-heading .bike-support {
+  .original-store .store-heading h2 {
+    font-size: clamp(29px, 7.8vw, 40px);
+    line-height: 1.06;
+  }
+  .original-store .store-heading > span {
     font-size: 17px;
     line-height: 1.65;
-    margin-top: 14px;
   }
-  .bike-store .store-tabs {
-    padding-bottom: 12px;
-    margin-bottom: 15px;
-    gap: 5px;
+  .original-store .store-products {
+    gap: 9px;
   }
-  .bike-store .store-tabs button {
-    font-size: 16px;
-    padding: 9px 11px;
-    min-height: 44px;
-  }
-  .bike-store .store-products {
-    gap: 15px;
-  }
-  .bike-store .store-product,
-  .bike-store .single-product .store-product {
-    grid-template-columns: 66px minmax(0, 1fr);
-    column-gap: 14px;
-    min-height: 66px;
-    align-items: center;
-  }
-  .bike-store .store-product-image {
-    grid-row: 1 / span 2;
-  }
-  .bike-store .store-product-image > span {
-    display: none;
-  }
-  .bike-store .store-product-tag {
+  .original-store .store-product > div > span {
     font-size: 14px;
     line-height: 1.5;
-    align-self: end;
   }
-  .bike-store .store-product > strong {
-    font-size: 17px;
-    line-height: 1.4;
-    margin-top: 4px;
-    align-self: start;
+  .original-store .store-product > div > svg {
+    display: none;
   }
-  .bike-store .store-bottom {
+  .original-store .store-product > p {
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.55;
+  }
+  .original-store .store-bottom {
     margin-top: 18px;
     padding-top: 14px;
   }
-  .bike-store .store-detail strong {
+  .original-store .store-bottom > span {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .original-store .owner-tag {
+    right: -4px;
+    bottom: 3px;
+    padding: 12px 14px;
+    max-width: calc(100% - 12px);
+    transform: rotate(2deg);
+  }
+  .original-store .owner-tag strong {
+    font-size: 17px;
+  }
+  .original-store .owner-tag div > span {
+    font-size: 14px;
+  }
+  .original-concept-label {
+    font-size: 14px;
+    margin: 16px 0 42px;
+    letter-spacing: 0.025em;
+  }
+  .original-store-detail > strong {
     font-size: 18px;
   }
-  .bike-store .store-detail p {
+  .original-store-detail p {
     font-size: 17px;
   }
-  .bike-store .store-detail > span {
+  .original-store-detail > span {
     font-size: 16px;
   }
-  .bike-store .owner-tag {
-    margin-top: 18px;
-    padding: 10px 14px;
-  }
-  .bike-store .owner-tag p {
-    font-size: 14px;
-  }
-  .bike-store .owner-tag strong {
-    font-size: 17px;
-  }
-  .bike-store .store-example-note {
-    margin-top: 14px;
-    font-size: 14px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .original-store .store-product img {
+    transition: none;
   }
 }
 
-.bike-store .store-product img {
-  width: 100%;
-  height: 100%;
+.original-store .scene-note {
+  background: #eeeee4;
+  padding: 2px 6px;
+  border-radius: 2px;
 }
-.bike-store .store-product-image {
-  aspect-ratio: 1;
+.original-store .original-concept-label {
+  color: #52653f;
 }
 @media (max-width: 800px) {
-  .bike-store .store-product-image {
-    width: 66px;
-    height: 66px;
+  .original-store .owner-tag {
+    right: 8px;
+    max-width: calc(100% - 16px);
+  }
+  .original-store .owner-tag > div {
+    min-width: 0;
   }
 }
