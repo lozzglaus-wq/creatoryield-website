@@ -549,13 +549,13 @@ export default function Home() {
                 A NOTE FROM THE FOUNDER
               </span>
               <blockquote>
-                “I know how to sell.
-                <br />I know how to build.
+                "I kept watching talented creators leave good money on the table.
+                <br />I knew how to fix it, so I did.
                 <br />
                 <em>
-                  And I know
+                  You deal with me directly, not a faceless team,
                   <br />
-                  this world.”
+                  and I treat your shop like it's my own"
                 </em>
               </blockquote>
               <div className="founder-art-footer">
