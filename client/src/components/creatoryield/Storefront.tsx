@@ -1,14 +1,6 @@
 import { useState } from "react";
-import {
-  ArrowUpRight,
-  Check,
-  Compass,
-  Heart,
-  MousePointer2,
-  X,
-} from "lucide-react";
+import { ArrowUpRight, Check, MousePointer2, X } from "lucide-react";
 
-// These existing assets also appear in CreatorYield’s compounding explanation.
 export const productImages = {
   headphones: "/manus-storage/async-images/wFJBgTnqYuqd3DlZKEwciE/image-1.webp",
   camera: "/manus-storage/async-images/wFJBgTnqYuqd3DlZKEwciE/image-2.webp",
@@ -18,110 +10,85 @@ export const productImages = {
 const products = [
   {
     id: "helmet",
-    category: "Riding gear",
+    category: "Riding kit",
     name: "The everyday helmet",
-    note: "The full face style you’ve seen on the channel. A place for the exact model, sizing advice and a link to the retailer.",
-    summary: "For the miles ahead.",
+    note: "A place for the helmet from the channel and its retailer link.",
     image: "/manus-storage/async-images/mzgi5hxBA75PJkDBV1CK3b/image-1.webp",
-    alt: "Illustrative graphite full face motorcycle helmet",
+    alt: "Illustrative graphite motorcycle helmet",
     tag: "ON THE BIKE",
   },
   {
     id: "gloves",
-    category: "Riding gear",
-    name: "The leather riding gloves",
-    note: "A familiar pair from the riding kit. In a live shop, Ted can explain why he uses them and share the exact retailer link.",
-    summary: "A familiar pair. Every ride.",
+    category: "Riding kit",
+    name: "The riding gloves",
+    note: "The familiar riding kit, ready to find after the video.",
     image: "/manus-storage/async-images/mzgi5hxBA75PJkDBV1CK3b/image-2.webp",
-    alt: "Illustrative brown leather motorcycle riding gloves",
-    tag: "RIDING FAVOURITE",
+    alt: "Illustrative brown leather riding gloves",
+    tag: "EVERY RIDE",
   },
   {
     id: "tools",
     category: "Garage",
     name: "The garage essentials",
-    note: "The tools behind the garage videos. A live collection can keep every item together, ready for viewers who want to find it later.",
-    summary: "For the jobs between rides.",
+    note: "The tools from the garage videos, kept together in one collection.",
     image: "/manus-storage/async-images/mzgi5hxBA75PJkDBV1CK3b/image-3.webp",
-    alt: "Illustrative compact motorcycle garage tool roll",
+    alt: "Illustrative motorcycle tool roll",
     tag: "IN THE GARAGE",
   },
 ];
 
 export default function Storefront() {
-  const [category, setCategory] = useState("All kit");
+  const [category, setCategory] = useState("All picks");
   const [selected, setSelected] = useState<string | null>(null);
   const visible =
-    category === "All kit"
+    category === "All picks"
       ? products
-      : products.filter(product => product.category === category);
+      : products.filter(item => item.category === category);
   const product = products.find(item => item.id === selected);
 
   return (
-    <div className="store-scene ted-scene" id="example-shop">
+    <div className="store-scene bike-store" id="example-shop">
       <div className="scene-note">
-        <MousePointer2 size={16} aria-hidden="true" />
+        <MousePointer2 size={13} aria-hidden="true" />
         EXPLORE AN EXAMPLE SHOP
       </div>
-      <section className="ted-shop" aria-labelledby="ted-shop-title">
-        <div className="ted-browser" aria-hidden="true">
-          <span className="ted-browser-dots">
+      <section className="store-window" aria-labelledby="ted-shop-title">
+        <div className="store-toolbar">
+          <span aria-hidden="true">
             <i />
             <i />
             <i />
           </span>
-          <span>THE CHANNEL’S OWN SHOP</span>
-          <ArrowUpRight size={14} />
+          <p>YOUR NAME. YOUR DOMAIN.</p>
+          <span className="toolbar-dot" aria-hidden="true" />
         </div>
-        <div className="ted-intro">
-          <div className="ted-brand-row">
-            <div className="ted-brand">
-              <span className="ted-brand-mark" aria-hidden="true">
-                <Compass size={26} strokeWidth={1.4} />
-              </span>
-              <span className="ted-wordmark">
-                Triump <strong>Ted</strong>
-                <small>THE RIDING COLLECTION</small>
-              </span>
-            </div>
-            <span className="ted-edition" aria-hidden="true">
-              EST. ON
-              <br />
-              THE ROAD
+        <div className="store-content">
+          <div className="store-nav">
+            <span className="store-wordmark">
+              Triump Ted<span>the riding collection.</span>
+            </span>
+            <span className="store-curated">
+              <Check size={12} aria-hidden="true" />
+              CREATOR CURATED
             </span>
           </div>
-          <p className="ted-kicker">THE RIDES. THE KIT. THE GARAGE.</p>
-          <h2 id="ted-shop-title">
-            You’ve seen it on my channel.
-            <br />
-            <em>It’s in my shop.</em>
-          </h2>
-          <p className="ted-description">
-            The kit I ride in and the tools I reach for. Everything from the
-            channel, in one place.
-          </p>
-          <div className="ted-support">
-            <Heart size={20} aria-hidden="true" />
-            <p>
-              <strong>
-                Shopping through these links supports my channel at no extra
-                cost to you.
-              </strong>
-              <span>I may earn a commission on qualifying purchases.</span>
+          <div className="store-heading">
+            <h2 id="ted-shop-title">
+              You’ve seen it on my channel.
+              <br />
+              <em>It’s in my shop.</em>
+            </h2>
+            <p className="bike-support">
+              These links support my channel{" "}
+              <strong>at no extra cost to you.</strong>
             </p>
           </div>
-        </div>
-        <div className="ted-catalogue">
-          <div className="ted-collection-title">
-            <h3>Find your next favourite.</h3>
-            <span>THE KIT EDIT</span>
-          </div>
           <div
-            className="ted-tabs"
+            className="store-tabs"
             role="group"
             aria-label="Triump Ted shop categories"
           >
-            {["All kit", "Riding gear", "Garage"].map(tab => (
+            {["All picks", "Riding kit", "Garage"].map(tab => (
               <button
                 key={tab}
                 aria-pressed={category === tab}
@@ -134,77 +101,63 @@ export default function Storefront() {
               </button>
             ))}
           </div>
-          <div className="ted-products">
+          <div
+            className={`store-products ${visible.length === 1 ? "single-product" : ""}`}
+          >
             {visible.map(item => (
-              <article className="ted-product" key={item.id}>
-                <button
-                  className="ted-product-button"
-                  onClick={() =>
-                    setSelected(selected === item.id ? null : item.id)
-                  }
-                  aria-label={`Explore example: ${item.name}`}
-                  aria-expanded={selected === item.id}
-                  aria-controls={
-                    selected === item.id ? "ted-recommendation" : undefined
-                  }
-                >
-                  <div className="ted-product-image">
-                    <img
-                      src={item.image}
-                      alt={item.alt}
-                      width="360"
-                      height="240"
-                    />
-                  </div>
-                  <div className="ted-product-copy">
-                    <span className="ted-product-tag">{item.tag}</span>
-                    <h4>{item.name}</h4>
-                    <p>{item.summary}</p>
-                    <span className="ted-product-link">
-                      Explore the kit{" "}
-                      <ArrowUpRight size={17} aria-hidden="true" />
-                    </span>
-                  </div>
-                </button>
-              </article>
+              <button
+                className="store-product"
+                key={item.id}
+                onClick={() => setSelected(item.id)}
+                aria-label={`View example recommendation: ${item.name}`}
+                aria-expanded={selected === item.id}
+              >
+                <div className="store-product-image">
+                  <img
+                    src={item.image}
+                    alt={item.alt}
+                    width="240"
+                    height="240"
+                  />
+                  <span>
+                    <ArrowUpRight size={16} aria-hidden="true" />
+                  </span>
+                </div>
+                <span className="store-product-tag">{item.tag}</span>
+                <strong>{item.name}</strong>
+              </button>
             ))}
           </div>
           {product && (
-            <div
-              className="ted-detail"
-              id="ted-recommendation"
-              role="region"
-              aria-label={`${product.name} example details`}
-              aria-live="polite"
-            >
+            <div className="store-detail" role="status">
               <button
                 onClick={() => setSelected(null)}
-                aria-label="Close kit details"
+                aria-label="Close example recommendation"
               >
-                <X size={20} />
+                <X size={16} />
               </button>
-              <span className="ted-product-tag">A CLOSER LOOK</span>
-              <h4>{product.name}</h4>
+              <strong>{product.name}</strong>
               <p>{product.note}</p>
-              <p className="ted-detail-note">
-                Illustrative recommendation. No retailer or affiliate link is
-                active in this preview.
-              </p>
+              <span>Illustrative example. No retailer link is active.</span>
             </div>
           )}
-          <div className="ted-shop-footer">
-            <span>Good kit. More miles.</span>
-            <span>Thanks for supporting the channel.</span>
+          <div className="store-bottom">
+            <span>I may earn a commission on qualifying purchases.</span>
           </div>
         </div>
       </section>
-      <div className="ted-example-footer">
-        <span className="ted-owned">
-          <Check size={18} aria-hidden="true" /> Built by us. Owned by the
-          creator.
+      <div className="owner-tag">
+        <span>
+          <Check size={17} aria-hidden="true" />
         </span>
-        <p>ILLUSTRATIVE SHOP. NOT A LIVE PRODUCT OFFER.</p>
+        <p>
+          Built by us.<strong>Owned by you.</strong>
+        </p>
+        <ArrowUpRight size={21} aria-hidden="true" />
       </div>
+      <p className="store-example-note">
+        ILLUSTRATIVE SHOP. NOT A LIVE PRODUCT OFFER.
+      </p>
     </div>
   );
 }

@@ -1,553 +1,204 @@
-.ted-scene {
-  width: 56%;
-  max-width: 610px;
-  padding: 0;
-  flex-shrink: 0;
-  min-width: 0;
+/* The original editorial shop illustration, adapted for motorbike kit. */
+.bike-store .store-content {
+  padding: 22px 24px 19px;
 }
-.ted-scene .scene-note {
-  position: static;
-  justify-content: flex-end;
-  margin-bottom: 16px;
-  font-size: 12px;
-  letter-spacing: 0.04em;
-  line-height: 1.6;
-  color: #ccd8bf;
+.bike-store .store-wordmark {
+  font-size: 31px;
+  color: #2c442c;
 }
-.ted-shop {
-  --ted-dark: #181c1b;
-  --ted-orange: #f3a36d;
-  --ted-paper: #f6f3ec;
-  overflow: hidden;
-  background: var(--ted-paper);
-  border: 1px solid #586258;
-  border-radius: 5px;
-  color: #202521;
-  box-shadow: 12px 14px 0 #33432a65;
-}
-.ted-browser {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  padding: 11px 19px;
-  background: #242a27;
-  border-bottom: 1px solid #464e47;
-  color: #c4c8bc;
-  font-size: 11px;
-  line-height: 1.6;
-  letter-spacing: 0.05em;
-}
-.ted-browser-dots {
-  display: flex;
-  gap: 5px;
-}
-.ted-browser-dots i {
-  width: 5px;
-  height: 5px;
-  background: #829182;
-  border-radius: 50%;
-}
-.ted-intro {
-  padding: 26px 26px 24px;
-  background: var(--ted-dark);
-  color: var(--ted-paper);
-}
-.ted-brand-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  padding-bottom: 23px;
-  border-bottom: 1px solid #454d43;
-}
-.ted-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  min-width: 0;
-}
-.ted-brand-mark {
-  border: 1px solid #a97450;
-  border-radius: 50%;
-  width: 42px;
-  height: 42px;
-  display: grid;
-  place-items: center;
-  color: var(--ted-orange);
-  flex-shrink: 0;
-}
-.ted-wordmark {
-  font-size: 29px;
-  font-weight: 500;
-  letter-spacing: -0.055em;
-  line-height: 1;
-}
-.ted-wordmark strong {
-  color: var(--ted-orange);
-  font-weight: 700;
-}
-.ted-wordmark small {
-  display: block;
+.bike-store .store-wordmark > span {
   font-size: 10px;
-  font-weight: 500;
-  color: #c4cbbd;
-  line-height: 1.6;
-  letter-spacing: 0.09em;
-  margin-top: 8px;
+  color: #61714f;
 }
-.ted-edition {
-  text-align: right;
-  color: #b1bbaa;
+.bike-store .store-curated {
+  font-size: 9px;
+  color: #586d41;
+}
+.bike-store .store-toolbar p {
   font-size: 10px;
-  letter-spacing: 0.07em;
-  line-height: 1.6;
-  flex-shrink: 0;
+  color: #61714f;
 }
-.ted-kicker {
-  font-size: 11px;
-  letter-spacing: 0.075em;
-  line-height: 1.6;
-  color: var(--ted-orange);
-  margin: 24px 0 13px;
-  font-weight: 600;
+.bike-store .store-heading {
+  padding-block: 24px 18px;
 }
-.ted-intro h2 {
-  font-size: clamp(29px, 2.7vw, 39px);
-  letter-spacing: -0.045em;
-  line-height: 1.13;
-  font-weight: 600;
+.bike-store .store-heading h2 {
+  font-size: 32px;
+  line-height: 1.1;
 }
-.ted-intro h2 em {
-  display: inline-block;
-  font-size: 1.17em;
-  color: var(--ted-orange);
-  margin-top: 5px;
+.bike-store .store-heading h2 em {
+  color: #6b844c;
 }
-.ted-description {
-  font-size: 14px;
-  color: #d0d6c9;
-  line-height: 1.75;
-  margin-top: 18px;
-  max-width: 440px;
-}
-.ted-support {
-  display: flex;
-  gap: 12px;
-  border-top: 1px solid #454d43;
-  margin-top: 22px;
-  padding-top: 18px;
-}
-.ted-support > svg {
-  color: var(--ted-orange);
-  flex-shrink: 0;
-  margin-top: 3px;
-}
-.ted-support p {
-  color: #eff0e9;
-  font-size: 14px;
+.bike-store .store-heading .bike-support {
+  margin: 13px 0 0;
+  font-size: 13px;
+  font-weight: 400;
   line-height: 1.65;
+  letter-spacing: 0;
+  color: #576849;
+  max-width: 400px;
 }
-.ted-support strong {
+.bike-support strong {
   font-weight: 500;
+  color: #39532d;
 }
-.ted-support span {
-  display: block;
+.bike-store .store-tabs {
+  margin-bottom: 16px;
+}
+.bike-store .store-tabs button {
   font-size: 12px;
-  color: #c3cdba;
-  margin-top: 6px;
-  line-height: 1.7;
+  padding: 7px 11px;
+  color: #586c42;
 }
-.ted-catalogue {
-  padding: 23px 22px 18px;
+.bike-store .store-tabs button[aria-pressed="true"] {
+  color: #354c23;
 }
-.ted-collection-title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
+.bike-store .store-product img {
+  object-fit: contain;
+  background: #f0ebdf;
 }
-.ted-collection-title h3 {
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: -0.04em;
-  line-height: 1.35;
+.bike-store .store-product-tag {
+  font-size: 9px;
+  color: #62734e;
 }
-.ted-collection-title > span {
-  font-size: 10px;
-  letter-spacing: 0.06em;
-  color: #58644f;
-  line-height: 1.6;
-}
-.ted-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  padding-block: 17px;
-}
-.ted-tabs button {
-  padding: 9px 13px;
+.bike-store .store-product > strong {
   font-size: 13px;
-  line-height: 1.5;
-  background: transparent;
-  color: #505b49;
-  border: 1px solid #d7d9cd;
-  border-radius: 2px;
-  min-height: 40px;
-  transition:
-    background 0.2s,
-    color 0.2s;
+  line-height: 1.45;
 }
-.ted-tabs button[aria-pressed="true"] {
-  background: #263025;
-  color: #f6f3ec;
-  border-color: #263025;
+.bike-store .store-products {
+  min-height: 0;
+  align-items: flex-start;
 }
-.ted-tabs button:hover {
-  border-color: #aa633a;
-}
-.ted-products {
-  display: flex;
-  gap: 12px;
-  align-items: stretch;
-}
-.ted-product {
-  flex: 0 1 calc((100% - 24px) / 3);
-  min-width: 0;
-  border: 1px solid #d8d9cc;
-  background: #fcfaf5;
-  border-radius: 3px;
-  overflow: hidden;
-}
-.ted-product-button {
-  border: 0;
-  padding: 0;
-  background: transparent;
-  color: inherit;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-.ted-product-image {
-  width: 100%;
-  overflow: hidden;
-  background: #e9e4d8;
-  border-bottom: 1px solid #deddd0;
-}
-.ted-product-image img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.3s;
-}
-.ted-product-button:hover img {
-  transform: scale(1.045);
-}
-.ted-product-copy {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  padding: 13px 11px 12px;
-}
-.ted-product-tag {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.035em;
+.bike-store .store-bottom {
+  font-size: 11px;
+  color: #576c43;
   line-height: 1.6;
-  color: #895231;
 }
-.ted-product h4,
-.ted-detail h4 {
-  font-size: 15px;
-  line-height: 1.4;
-  letter-spacing: -0.025em;
-  font-weight: 600;
-  margin: 7px 0;
-  overflow-wrap: break-word;
-}
-.ted-product-copy p {
-  font-size: 12px;
-  line-height: 1.6;
-  color: #596350;
-  margin-bottom: 15px;
-}
-.ted-product-link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.6;
-  color: #8b4d2c;
-  border-top: 1px solid #e0ded2;
-  padding-top: 10px;
-  margin-top: auto;
-}
-.ted-product-link svg {
-  flex-shrink: 0;
-}
-.ted-detail {
-  margin-top: 18px;
-  padding: 20px 47px 20px 19px;
-  background: #ececdf;
-  border: 1px solid #c7cfb9;
-  position: relative;
-}
-.ted-detail > button {
-  position: absolute;
-  right: 4px;
-  top: 4px;
-  width: 44px;
-  height: 44px;
-  border: 0;
-  background: transparent;
-  color: #45543b;
-  display: grid;
-  place-items: center;
-}
-.ted-detail h4 {
-  font-size: 20px;
-}
-.ted-detail p {
+.bike-store .store-detail strong {
   font-size: 14px;
-  line-height: 1.75;
-  color: #43533a;
 }
-.ted-detail .ted-detail-note {
-  margin-top: 12px;
-  font-size: 12px;
-  color: #536449;
-}
-.ted-shop-footer {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  padding-top: 17px;
-  margin-top: 20px;
-  border-top: 1px solid #d4d8c8;
-  font-size: 11px;
-  line-height: 1.6;
-  color: #58654d;
-}
-.ted-shop-footer > span:first-child {
-  font-weight: 600;
-}
-.ted-example-footer {
-  padding-top: 22px;
-}
-.ted-owned {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
+.bike-store .store-detail p {
   font-size: 13px;
-  line-height: 1.6;
-  color: #d9e7c3;
+  color: #4f6340;
 }
-.ted-owned svg {
-  flex-shrink: 0;
-  color: var(--lime);
-}
-.ted-example-footer > p {
+.bike-store .store-detail > span {
   font-size: 11px;
-  line-height: 1.6;
-  letter-spacing: 0.045em;
-  color: #bfd0ab;
-  margin-top: 9px;
-}
-.ted-shop button:focus-visible {
-  outline: 3px solid #a75e32;
-  outline-offset: -3px;
+  color: #5a7046;
 }
 
-@media (max-width: 1100px) and (min-width: 801px) {
-  .ted-scene {
-    width: 52%;
-  }
-  .ted-intro {
-    padding-inline: 21px;
-  }
-  .ted-catalogue {
-    padding-inline: 18px;
-  }
-  .ted-products {
-    flex-wrap: wrap;
-  }
-  .ted-product {
-    flex-basis: calc((100% - 12px) / 2);
-  }
-  .ted-collection-title > span,
-  .ted-edition {
-    display: none;
-  }
-}
 @media (max-width: 800px) {
-  .ted-scene {
-    width: 100%;
-    max-width: 560px;
-    margin-top: 12px;
-  }
-  .ted-scene .scene-note {
-    justify-content: flex-start;
-    font-size: 14px;
-  }
-  .ted-shop {
-    box-shadow: 5px 7px 0 #33432a65;
-  }
-  .ted-browser {
-    padding-inline: 16px;
-    font-size: 14px;
-    letter-spacing: 0.015em;
-  }
-  .ted-browser-dots {
-    display: none;
-  }
-  .ted-intro {
-    padding: 25px 20px;
-  }
-  .ted-brand-row {
-    gap: 12px;
-  }
-  .ted-wordmark {
-    font-size: 32px;
-  }
-  .ted-wordmark small {
-    font-size: 14px;
-    letter-spacing: 0.025em;
-  }
-  .ted-edition {
-    display: none;
-  }
-  .ted-kicker {
-    font-size: 14px;
-    line-height: 1.7;
-    letter-spacing: 0.025em;
-  }
-  .ted-intro h2 {
-    font-size: clamp(31px, 8.5vw, 43px);
-    line-height: 1.16;
-    overflow-wrap: break-word;
-  }
-  .ted-description {
-    font-size: 18px;
-    line-height: 1.75;
-  }
-  .ted-support {
-    gap: 10px;
-  }
-  .ted-support p {
-    font-size: 17px;
-    line-height: 1.75;
-  }
-  .ted-support span {
-    font-size: 16px;
-    line-height: 1.7;
-  }
-  .ted-support > svg {
-    margin-top: 5px;
-  }
-  .ted-catalogue {
-    padding: 25px 18px 22px;
-  }
-  .ted-collection-title {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .ted-collection-title h3 {
-    font-size: 26px;
-  }
-  .ted-collection-title > span {
-    font-size: 14px;
-  }
-  .ted-tabs {
-    gap: 8px;
-    padding-block: 20px;
-  }
-  .ted-tabs button {
-    font-size: 16px;
-    min-height: 44px;
-    padding: 10px 12px;
-  }
-  .ted-products {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .ted-product {
-    flex-basis: auto;
-    width: 100%;
-  }
-  .ted-product-copy {
+  .bike-store .store-content {
     padding: 20px 18px 18px;
   }
-  .ted-product-tag {
+  .bike-store .store-nav {
+    gap: 12px;
+  }
+  .bike-store .store-wordmark {
+    font-size: 32px;
+  }
+  .bike-store .store-wordmark > span {
     font-size: 14px;
-    line-height: 1.65;
+    line-height: 1.6;
+    margin-top: 6px;
   }
-  .ted-product h4 {
-    font-size: 22px;
-    line-height: 1.35;
-    margin-block: 10px;
+  .bike-store .store-curated {
+    display: none;
   }
-  .ted-product-copy p {
+  .bike-store .store-toolbar {
+    padding: 10px 12px;
+  }
+  .bike-store .store-toolbar p {
+    font-size: 14px;
+  }
+  .bike-store .store-heading {
+    padding-block: 20px 18px;
+  }
+  .bike-store .store-heading h2 {
+    font-size: clamp(29px, 7.8vw, 36px);
+    line-height: 1.1;
+  }
+  .bike-store .store-heading .bike-support {
     font-size: 17px;
-    line-height: 1.7;
-  }
-  .ted-product-link {
-    font-size: 16px;
     line-height: 1.65;
-    padding-top: 15px;
+    margin-top: 14px;
   }
-  .ted-detail {
-    padding: 20px 46px 20px 18px;
+  .bike-store .store-tabs {
+    padding-bottom: 12px;
+    margin-bottom: 15px;
+    gap: 5px;
   }
-  .ted-detail h4 {
-    font-size: 22px;
+  .bike-store .store-tabs button {
+    font-size: 16px;
+    padding: 9px 11px;
+    min-height: 44px;
+  }
+  .bike-store .store-products {
+    gap: 15px;
+  }
+  .bike-store .store-product,
+  .bike-store .single-product .store-product {
+    grid-template-columns: 66px minmax(0, 1fr);
+    column-gap: 14px;
+    min-height: 66px;
+    align-items: center;
+  }
+  .bike-store .store-product-image {
+    grid-row: 1 / span 2;
+  }
+  .bike-store .store-product-image > span {
+    display: none;
+  }
+  .bike-store .store-product-tag {
+    font-size: 14px;
+    line-height: 1.5;
+    align-self: end;
+  }
+  .bike-store .store-product > strong {
+    font-size: 17px;
     line-height: 1.4;
-  }
-  .ted-detail p {
-    font-size: 17px;
-    line-height: 1.75;
-  }
-  .ted-detail .ted-detail-note {
-    font-size: 16px;
-  }
-  .ted-shop-footer {
-    flex-direction: column;
-    gap: 6px;
-    font-size: 16px;
-    line-height: 1.65;
-  }
-  .ted-owned {
-    font-size: 16px;
-    align-items: flex-start;
-  }
-  .ted-owned svg {
     margin-top: 4px;
+    align-self: start;
   }
-  .ted-example-footer > p {
+  .bike-store .store-bottom {
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 1.6;
+    margin-top: 18px;
+    padding-top: 14px;
   }
-  .ted-wordmark,
-  .ted-wordmark strong,
-  .ted-product h4,
-  .ted-detail h4 {
-    overflow-wrap: anywhere;
+  .bike-store .store-detail strong {
+    font-size: 18px;
   }
-  .ted-brand,
-  .ted-support p,
-  .ted-shop-footer > span,
-  .ted-owned {
-    min-width: 0;
+  .bike-store .store-detail p {
+    font-size: 17px;
+  }
+  .bike-store .store-detail > span {
+    font-size: 16px;
+  }
+  .bike-store .owner-tag {
+    margin-top: 18px;
+    padding: 10px 14px;
+  }
+  .bike-store .owner-tag p {
+    font-size: 14px;
+  }
+  .bike-store .owner-tag strong {
+    font-size: 17px;
+  }
+  .bike-store .store-example-note {
+    margin-top: 14px;
+    font-size: 14px;
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  .ted-product-image img,
-  .ted-tabs button {
-    transition: none;
+
+.bike-store .store-product img {
+  width: 100%;
+  height: 100%;
+}
+.bike-store .store-product-image {
+  aspect-ratio: 1;
+}
+@media (max-width: 800px) {
+  .bike-store .store-product-image {
+    width: 66px;
+    height: 66px;
   }
 }
