@@ -544,25 +544,6 @@ export default function Home() {
 
         <section className="founder-section" id="founder">
           <div className="shell founder-layout">
-            <div className="founder-art">
-              <span className="founder-art-kicker">
-                A NOTE FROM THE FOUNDER
-              </span>
-              <blockquote>
-                "I kept watching talented creators leave good money on the table.
-                <br />I knew how to fix it, so I did.
-                <br />
-                <em>
-                  You deal with me directly, not a faceless team,
-                  <br />
-                  and I treat your shop like it's my own"
-                </em>
-              </blockquote>
-              <div className="founder-art-footer">
-                <Brand />
-                <ArrowUpRight size={24} />
-              </div>
-            </div>
             <div className="founder-copy">
               <SectionLabel number="06">BUILT FROM THE INSIDE</SectionLabel>
               <h2>

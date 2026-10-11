@@ -1237,6 +1237,7 @@ a:focus-visible {
   display: flex;
   gap: 80px;
   align-items: center;
+  justify-content: center;
 }
 .founder-art {
   width: 47%;
@@ -1275,7 +1276,8 @@ a:focus-visible {
   transform: scale(0.8);
 }
 .founder-copy {
-  width: 53%;
+  width: 100%;
+  max-width: 640px;
 }
 .founder-copy h2 {
   font-size: 44px;
@@ -1287,7 +1289,7 @@ a:focus-visible {
   font-size: 13px;
   line-height: 1.9;
   margin-top: 21px;
-  max-width: 420px;
+  max-width: none;
 }
 .founder-copy > p + p {
   margin-top: 15px !important;
