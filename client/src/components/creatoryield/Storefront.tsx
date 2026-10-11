@@ -149,9 +149,6 @@ export default function Storefront() {
         </p>
         <ArrowUpRight size={21} />
       </div>
-      <p className="store-example-note">
-        ILLUSTRATIVE SHOP. NOT A LIVE PRODUCT OFFER.
-      </p>
     </div>
   );
 }
