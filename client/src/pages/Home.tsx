@@ -42,7 +42,7 @@ const process = [
     number: "01",
     icon: Search,
     title: "Research\nand plan.",
-    copy: "We study your channel and your audience, then listen. You tell us what you use, what you’d stand behind and what you won’t touch. Together, we plan a shop around products your audience has a reason to buy.",
+    copy: "We study your social media and your audience, then listen. You tell us what you use, what you’d stand behind and what you won’t touch. Together, we plan a shop around products your audience has a reason to buy.",
     points: [
       "Channel and audience research",
       "Your approval on the product selection",
@@ -146,7 +146,7 @@ export default function Home() {
           <div className="hero-lower">
             <div className="hero-copy">
               <p className="hero-description">
-                We study your channel, work out what your audience is likely to
+                We study your social media, work out what your audience is likely to
                 buy and build your own shop around it. Then we use clicks and
                 sales to keep your best earners in view.
               </p>
