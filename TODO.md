@@ -28,3 +28,9 @@ Verified computed text sizes and no horizontal overflow at 320, 360, 390, 430, 6
 - [x] Remove the brief unstyled white page on first load. Deliver the page and mobile styles as render blocking stylesheets in the initial HTML rather than waiting for JavaScript to import them. Preserve readable prerendered content, mobile sizing and the existing design. Verify the page remains styled with JavaScript disabled and the production HTML references built stylesheets. No publication requested.
 
 Verified the public preview at 390px both with JavaScript disabled and enabled: forest green opening, 18px paragraph and pricing copy, 16px primary CTA and no horizontal overflow. Client hydration and enquiry opening remain functional without browser errors. TypeScript and production build pass; built HTML includes the full design as a render blocking stylesheet in the head.
+
+## Build section value proposition
+
+- [x] Strengthen the existing Build your shop step with a high quality, properly coded website on the creator’s own domain; clear value from speed and responsive design; clean site structure and internal linking; technical SEO, indexing setup and metadata; page speed optimisation supporting visitors and search performance. Explain the opportunity to be found and earn between posts without guaranteeing rankings or income. Preserve mobile readability and the five concrete deliverables, with no dashes in public copy. Leave the existing dev server running and do not publish.
+
+Updated only the build copy, checklist and supporting line. All five deliverables appear in the public preview. Existing mobile 18px paragraph and 17px checklist rules remain unchanged. TypeScript and production build pass. The server remains running; no publication or database changes.
