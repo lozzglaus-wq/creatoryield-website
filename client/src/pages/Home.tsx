@@ -68,9 +68,9 @@ const process = [
     number: "03",
     icon: ChartNoAxesCombined,
     title: "Manage\nand grow.",
-    copy: "We track clicks and attributed sales to see what earns its place. New recommendations get visibility. Proven performers stay easy to find. We adjust the layout, keep products current and review partner opportunities as your shop grows.",
+    copy: "We use analytics to see which products earn their place. New recommendations get visibility, and proven performers stay easy to find. We read the data to adjust the layout, keep products current and review partner rates as your shop grows.",
     points: [
-      "Clicks and sales inform product placement",
+      "Analytics guide product placement",
       "New mentions and older favourites work together",
       "Products and partner rates kept under review",
     ],
