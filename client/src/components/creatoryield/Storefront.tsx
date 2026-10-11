@@ -73,9 +73,9 @@ export default function Storefront() {
           <div className="store-heading">
             <p>USED BY ME. SHARED WITH YOU.</p>
             <h2>
-              My world.
+              You’ve seen it in my video,
               <br />
-              <em>My recommendations.</em>
+              <em>it’s in my shop.</em>
             </h2>
           </div>
           <div className="store-tabs" aria-label="Example shop categories">
