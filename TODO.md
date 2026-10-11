@@ -22,3 +22,9 @@ TypeScript checks, all 14 tests and the production build passed. Public preview 
 - [x] Replace tiny mobile writing with 18px main copy, at least 16px supporting copy and controls, and at least 14px labels and captions. Improve contrast, line height and spacing. Reflow comparison, pricing and example products instead of shrinking text into narrow columns. Preserve the agreed page copy, bold design, desktop appearance and enquiry functionality. Check at phone widths and with enlarged text before saving. No publication is requested.
 
 Verified computed text sizes and no horizontal overflow at 320, 360, 390, 430, 640, 768 and 800 pixels. Main paragraphs, comparison rows and price descriptions are 18px; no visible text falls below 14px. Phone screenshots inspected. At 390px, doubling text size reflows without horizontal scrolling. Desktop typography is unchanged. Example categories, recommendation detail, mobile menu and enquiry dialog remain functional; enquiry inputs are 18px and consent is 16px. TypeScript and production build pass. No database writes or publication performed.
+
+## Initial load styling correction
+
+- [x] Remove the brief unstyled white page on first load. Deliver the page and mobile styles as render blocking stylesheets in the initial HTML rather than waiting for JavaScript to import them. Preserve readable prerendered content, mobile sizing and the existing design. Verify the page remains styled with JavaScript disabled and the production HTML references built stylesheets. No publication requested.
+
+Verified the public preview at 390px both with JavaScript disabled and enabled: forest green opening, 18px paragraph and pricing copy, 16px primary CTA and no horizontal overflow. Client hydration and enquiry opening remain functional without browser errors. TypeScript and production build pass; built HTML includes the full design as a render blocking stylesheet in the head.

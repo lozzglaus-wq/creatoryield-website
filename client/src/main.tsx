@@ -1,7 +1,5 @@
 import { createRoot, hydrateRoot } from "react-dom/client";
 import App from "./App";
-import "./index.css";
-import "./mobile.css";
 
 const root = document.getElementById("root")!;
 if (root.children.length > 0) hydrateRoot(root, <App />);
