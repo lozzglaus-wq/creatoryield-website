@@ -59,3 +59,11 @@ The user clarified that neither the second layout nor the third compact version 
 - [x] Restore the actual first image-led e-commerce composition from 3200f21 and adapt only name, products and necessary channel wording to Triump Ted. Keep three products side by side with one larger featured tile on phone and desktop, no category list, no miniature thumbnail rows and no long catalogue. Keep the explicit no extra cost support message and affiliate disclosure. Preserve readable phone labels, compact height, working collection detail buttons, existing agency page and dev server. No publication.
 
 Verified the featured collection is approximately 1.57 times the width of each supporting collection on phone and desktop. All three remain side by side. Phone illustration height is 774px at 390px viewport, compared with 2355px for the rejected long shop. No horizontal overflow at 320, 360, 390, 430, 768, 1024 and 1440px; no mobile shop text below 14px. Product photographs load, collection details open and close, TypeScript and production build pass. Phone and desktop screenshots inspected against the actual first composition. The surrounding agency site and its running server are preserved.
+
+## Roll back motorbike shop experiment
+
+The user requested rollback to the original, retaining the enhanced build section. Restore the exact pre motorbike version 6d825b5, including its original illustrative shop, rather than producing another reinterpretation. The first motorbike change was 83949a6. All subsequent illustration variants are superseded.
+
+- [x] Restore Storefront.tsx and client/index.html exactly from 6d825b5 and remove ted-shop.css. Keep Home.tsx with the enhanced Build your shop copy and all five technical deliverables. Keep mobile readability and initial HTML style loading fixes. No new shop design, no publication and keep the dev server running.
+
+Verified the restored shop, HTML head, Home.tsx and desktop/mobile styles match 6d825b5 byte for byte. TypeScript and production build pass. Public preview shows the original good stuff shop and preserved enhanced Build your shop copy; no Triump Ted text or motorbike stylesheet remains.
