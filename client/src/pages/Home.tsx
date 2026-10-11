@@ -373,9 +373,7 @@ export default function Home() {
                 </h2>
               </div>
               <p>
-                We do the research, build the shop and take care of what happens
-                next. You help shape the plan and approve the products. Then
-                carry on creating.
+                We do the research, build the shop and take care of what happens next. Where a brand runs an affiliate programme we get you on it, and where they don't, or where we can push for a better rate, we reach out directly, sometimes to brands we may already work with. We keep every link live and working, swap in better deals and add new gear as you feature it. You shape the plan and approve every product, then carry on creating
               </p>
             </div>
             <div className="process-list">
