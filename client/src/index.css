@@ -256,6 +256,13 @@ a:focus-visible {
   align-items: center;
   gap: 33px;
   font-size: 11px;
+  margin-left: auto;
+}
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
 }
 .header-nav > a {
   color: #b2bba9;

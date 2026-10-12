@@ -824,3 +824,52 @@
     overflow-wrap: anywhere;
   }
 }
+
+@media (max-width: 800px) {
+  .header-inner {
+    gap: 12px;
+  }
+  .header-controls {
+    gap: 8px;
+  }
+  .header-contact {
+    font-size: 16px;
+    white-space: nowrap;
+    padding: 10px 12px;
+    min-height: 44px;
+    justify-content: center;
+  }
+  .header-contact > svg {
+    display: none;
+  }
+  .header-controls .menu-toggle {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 7px;
+  }
+}
+
+@media (max-width: 365px) {
+  .header-inner {
+    gap: 8px;
+  }
+  .header-inner > .brand {
+    gap: 7px;
+  }
+  .header-inner .brand-word {
+    font-size: 20px;
+  }
+  .header-inner .brand-mark {
+    width: 18px;
+    gap: 2px;
+  }
+  .header-inner .brand-mark i {
+    width: 4px;
+  }
+  .header-contact {
+    padding-inline: 8px;
+  }
+  .header-controls {
+    gap: 4px;
+  }
+}

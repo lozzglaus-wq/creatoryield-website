@@ -110,20 +110,22 @@ export default function Home() {
               <a href="#pricing" onClick={closeMenu}>
                 The numbers
               </a>
-              <button className="nav-contact" onClick={openContact}>
-                Let’s talk
+            </nav>
+            <div className="header-controls">
+              <button className="nav-contact header-contact" onClick={openContact}>
+                Contact us
                 <ArrowUpRight size={17} />
               </button>
-            </nav>
-            <button
-              className="menu-toggle"
-              aria-label={menuOpen ? "Close navigation" : "Open navigation"}
-              aria-expanded={menuOpen}
-              aria-controls="main-navigation"
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              {menuOpen ? <X /> : <Menu />}
-            </button>
+              <button
+                className="menu-toggle"
+                aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+                aria-expanded={menuOpen}
+                aria-controls="main-navigation"
+                onClick={() => setMenuOpen(!menuOpen)}
+              >
+                {menuOpen ? <X /> : <Menu />}
+              </button>
+            </div>
           </div>
         </header>
         <section className="hero shell" aria-labelledby="hero-title">
@@ -155,9 +157,6 @@ export default function Home() {
                 keep working between posts.
               </p>
               <div className="hero-actions">
-                <Action onClick={openContact}>
-                  Talk to us about your shop
-                </Action>
                 <a href="#approach" className="hero-explore">
                   See how it works
                   <ArrowDown size={16} />
@@ -525,9 +524,6 @@ export default function Home() {
                 separately before launch. You know the full arrangement before
                 committing.
               </p>
-              <Action onClick={openContact}>
-                Let’s talk through your shop
-              </Action>
             </div>
           </div>
         </section>
@@ -570,13 +566,6 @@ export default function Home() {
                 <br />
                 <em>Let’s build your shop.</em>
               </h2>
-              <button
-                className="closing-arrow"
-                onClick={openContact}
-                aria-label="Start a conversation about your shop"
-              >
-                <ArrowUpRight strokeWidth={1.1} />
-              </button>
             </div>
             <div className="closing-bottom">
               <p>
