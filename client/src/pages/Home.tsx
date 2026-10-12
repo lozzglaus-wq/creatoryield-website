@@ -275,15 +275,6 @@ export default function Home() {
                     Just added
                   </span>
                 </div>
-                <div className="collection-total">
-                  <MoveUpRight size={25} />
-                  <p>
-                    New mentions bring people in.
-                    <br />
-                    <strong>Older favourites stay in the picture.</strong>
-                  </p>
-                </div>
-                <p className="concept-label">ILLUSTRATIVE EXAMPLE</p>
               </div>
             </div>
             <div className="mechanism-note">
