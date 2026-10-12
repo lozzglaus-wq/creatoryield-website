@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type MouseEvent } from "react";
 import {
   ArrowDown,
   ArrowUpRight,
@@ -16,9 +16,10 @@ import { Brand, SectionLabel } from "../components/creatoryield/Brand";
 import Storefront, {
   productImages,
 } from "../components/creatoryield/Storefront";
-
-const contactEmail = "hello@creatoryield.co.uk";
-const contactHref = `mailto:${contactEmail}`;
+import EmailContactDialog, {
+  contactEmail,
+  contactHref,
+} from "../components/creatoryield/EmailContactDialog";
 
 const comparisons = [
   [
@@ -82,7 +83,14 @@ const process = [
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
   const closeMenu = () => setMenuOpen(false);
+  const openContact = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    setMenuOpen(false);
+    setContactOpen(true);
+  };
 
   return (
     <>
@@ -109,7 +117,7 @@ export default function Home() {
               </a>
             </nav>
             <div className="header-controls">
-              <a className="nav-contact header-contact" href={contactHref} onClick={closeMenu}>
+              <a className="nav-contact header-contact" href={contactHref} onClick={openContact} target="_blank" rel="noopener noreferrer" aria-haspopup="dialog">
                 Contact us
                 <ArrowUpRight size={17} />
               </a>
@@ -565,7 +573,7 @@ export default function Home() {
                 Tell us about your channel. We’ll look at where a shop could
                 fit.
               </p>
-              <a className="action" href={contactHref}>
+              <a className="action" href={contactHref} onClick={openContact} target="_blank" rel="noopener noreferrer" aria-haspopup="dialog">
                 Start the conversation
                 <ArrowUpRight size={18} aria-hidden="true" />
               </a>
@@ -584,10 +592,11 @@ export default function Home() {
         </div>
         <div className="shell footer-bottom">
           <span>© {new Date().getFullYear()} CreatorYield</span>
-          <a className="footer-email" href={contactHref}>{contactEmail}</a>
+          <a className="footer-email" href={contactHref} onClick={openContact} target="_blank" rel="noopener noreferrer" aria-haspopup="dialog">{contactEmail}</a>
           <span>Your shop. Your return.</span>
         </div>
       </footer>
+      <EmailContactDialog open={contactOpen} onOpenChange={setContactOpen} />
     </>
   );
 }

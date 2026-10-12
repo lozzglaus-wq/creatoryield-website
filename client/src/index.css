@@ -2746,3 +2746,50 @@ a:focus-visible {
     transition: none !important;
   }
 }
+
+/* Email contact options */
+.email-contact-dialog > p:not(.eyebrow) {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4d5948;
+}
+.email-address-label {
+  display: block;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #405830;
+}
+.email-address-field {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 14px 10px;
+  border: 1px solid #cbd7ba;
+  background: #fffefa;
+  color: var(--ink);
+  font-size: 16px;
+}
+.email-address-field:focus {
+  outline: 2px solid var(--olive);
+  outline-offset: 2px;
+}
+.email-contact-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+.email-contact-options .action {
+  width: 100%;
+  min-height: 48px;
+  font-size: 16px;
+}
+.email-contact-options .email-copy {
+  background: transparent;
+  color: var(--ink);
+  border-color: #91a77a;
+}
+.email-contact-dialog > .email-contact-help {
+  margin-top: 18px;
+}
