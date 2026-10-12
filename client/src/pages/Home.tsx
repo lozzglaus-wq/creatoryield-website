@@ -536,20 +536,15 @@ export default function Home() {
                 <em>Missed opportunities.</em>
               </h2>
               <p>
-                I’ve got a background in sales, marketing and web design, and
-                I’ve spent years around creators. I understand this world from
-                the inside, not from a spreadsheet.
-              </p>
-              <p>
-                I started CreatorYield because I kept watching talented people
-                leave good money on the table. The mix of knowing how to sell,
-                how to build and how creators actually think was exactly what
-                could help change that.
-              </p>
-              <p>
-                Creators already do the hard part: earn people’s attention and
-                trust. I wanted to build the commercial support that helps them
-                get more from it, without handing over their business.
+                I've got a background in sales, marketing and web design, and
+                I've spent a lot of time understanding how creators actually
+                earn. I started CreatorYield because I kept watching talented
+                people leave good money on the table. Knowing how to sell, how
+                to build and how creators think, I knew I could help change
+                that. Creators already do the hard part: earning people's
+                attention and trust. I wanted to give them the commercial
+                support to get more from it, without handing over their
+                business.
               </p>
             </div>
           </div>
