@@ -285,7 +285,7 @@ export default function Home() {
                 <strong>How the earnings work.</strong> When someone buys
                 through a tracked partner link in your shop, a qualifying sale
                 can earn commission. We manage the products, placement and
-                partner opportunities. You keep the larger share.
+                partner opportunities.
               </p>
             </div>
           </div>
