@@ -478,9 +478,8 @@ export default function Home() {
                 </h2>
               </div>
               <p>
-                No monthly agency retainer. Our ongoing income comes from a
-                share of the earnings your shop generates. The bigger share
-                always stays with you.
+                No monthly fees. Our income grows only when yours does, which
+                is why we never stop improving your shop. You keep at least 70%.
               </p>
             </div>
             <div className="pricing-panels">
