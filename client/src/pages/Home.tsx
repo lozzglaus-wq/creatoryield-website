@@ -557,7 +557,6 @@ export default function Home() {
                 trust. I wanted to build the commercial support that helps them
                 get more from it, without handing over their business.
               </p>
-              <span className="founder-signature">In your corner.</span>
             </div>
           </div>
         </section>
