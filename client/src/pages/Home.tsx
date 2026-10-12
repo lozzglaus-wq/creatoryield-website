@@ -364,7 +364,7 @@ export default function Home() {
                 </h2>
               </div>
               <p>
-                We do the research, build the shop and take care of what happens next. Where a brand runs an affiliate programme we get you on it, and where they don't, or where we can push for a better rate, we reach out directly, sometimes to brands we may already work with. We keep every link live and working, swap in better deals and add new gear as you feature it. You shape the plan and approve every product, then carry on creating
+                We do the research, build the shop and look after everything after. Where a brand runs an affiliate programme, we get you on it. Where they don't, or where we think you deserve a better rate, we go direct and negotiate. We keep every link live, swap in better deals and add new gear as you feature it. And we go out and knock on doors for you. We approach brands that fit your channel about paid partnerships and product deals, and we handle them from first email to signed agreement. On a brand deal we never take more than 15%, and you only ever share on deals we bring to you. Anything you land yourself stays entirely yours. You shape the plan and approve everything. Then you carry on creating.
               </p>
             </div>
             <div className="process-list">
