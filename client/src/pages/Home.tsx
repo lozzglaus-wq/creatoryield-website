@@ -478,7 +478,7 @@ export default function Home() {
               </div>
               <p>
                 No monthly fees. Our income grows only when yours does, which
-                is why we never stop improving your shop. You keep at least 70%.
+                is why we never stop improving your shop. You keep at least 75%.
               </p>
             </div>
             <div className="pricing-panels">
@@ -497,9 +497,10 @@ export default function Home() {
                 <strong className="price-figure">
                   £0<span>monthly</span>
                 </strong>
-                <h3>No recurring retainer.</h3>
+                <h3>No monthly fees.</h3>
                 <p>
-                  Ongoing management is paid through our agreed revenue share.
+                  We're paid from what your shop earns, so we're always working
+                  to make it earn more.
                 </p>
               </article>
               <article className="price-panel price-share">
@@ -508,21 +509,21 @@ export default function Home() {
                   <ArrowUpRight size={23} />
                 </span>
                 <h3>
-                  Always <br />
-                  in your <br />
-                  <em>favour.</em>
+                  You keep <br />
+                  at least <br />
+                  <em>75%.</em>
                 </h3>
                 <p>
-                  The split is agreed with you before we build. You always keep
-                  the larger share.
+                  Your exact split is agreed with you before we build, based on
+                  your channel. It never drops below 75%, and on brand deals we
+                  bring you, you keep at least 85%.
                 </p>
               </article>
             </div>
             <div className="pricing-bottom">
               <p>
-                Any domain, hosting or other third party costs are set out
-                separately before launch. You know the full arrangement before
-                committing.
+                Small costs like your domain and hosting are set out clearly
+                before launch, so there are no surprises.
               </p>
             </div>
           </div>
