@@ -1397,12 +1397,24 @@ a:focus-visible {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 24px;
   border-top: 1px solid #35452d;
   padding-block: 18px 21px;
   font-size: 8px;
   color: #748864;
 }
-
+.footer-email {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 16px;
+  color: var(--cream);
+  overflow-wrap: anywhere;
+}
+.footer-email:hover {
+  color: var(--lime);
+}
 .dialog-overlay {
   position: fixed;
   inset: 0;

@@ -12,11 +12,13 @@ import {
   MoveUpRight,
   Play,
 } from "lucide-react";
-import { Brand, Action, SectionLabel } from "../components/creatoryield/Brand";
-import ContactDialog from "../components/creatoryield/ContactDialog";
+import { Brand, SectionLabel } from "../components/creatoryield/Brand";
 import Storefront, {
   productImages,
 } from "../components/creatoryield/Storefront";
+
+const contactEmail = "hello@creatoryield.co.uk";
+const contactHref = `mailto:${contactEmail}`;
 
 const comparisons = [
   [
@@ -79,12 +81,7 @@ const process = [
 ];
 
 export default function Home() {
-  const [contactOpen, setContactOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const openContact = () => {
-    setContactOpen(true);
-    setMenuOpen(false);
-  };
   const closeMenu = () => setMenuOpen(false);
 
   return (
@@ -112,10 +109,10 @@ export default function Home() {
               </a>
             </nav>
             <div className="header-controls">
-              <button className="nav-contact header-contact" onClick={openContact}>
+              <a className="nav-contact header-contact" href={contactHref} onClick={closeMenu}>
                 Contact us
                 <ArrowUpRight size={17} />
-              </button>
+              </a>
               <button
                 className="menu-toggle"
                 aria-label={menuOpen ? "Close navigation" : "Open navigation"}
@@ -573,7 +570,10 @@ export default function Home() {
                 Tell us about your channel. We’ll look at where a shop could
                 fit.
               </p>
-              <Action onClick={openContact}>Start the conversation</Action>
+              <a className="action" href={contactHref}>
+                Start the conversation
+                <ArrowUpRight size={18} aria-hidden="true" />
+              </a>
             </div>
           </div>
         </section>
@@ -589,10 +589,10 @@ export default function Home() {
         </div>
         <div className="shell footer-bottom">
           <span>© {new Date().getFullYear()} CreatorYield</span>
+          <a className="footer-email" href={contactHref}>{contactEmail}</a>
           <span>Your shop. Your return.</span>
         </div>
       </footer>
-      <ContactDialog open={contactOpen} onOpenChange={setContactOpen} />
     </>
   );
 }
