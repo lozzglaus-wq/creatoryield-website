@@ -67,3 +67,9 @@ The user requested rollback to the original, retaining the enhanced build sectio
 - [x] Restore Storefront.tsx and client/index.html exactly from 6d825b5 and remove ted-shop.css. Keep Home.tsx with the enhanced Build your shop copy and all five technical deliverables. Keep mobile readability and initial HTML style loading fixes. No new shop design, no publication and keep the dev server running.
 
 Verified the restored shop, HTML head, Home.tsx and desktop/mobile styles match 6d825b5 byte for byte. TypeScript and production build pass. Public preview shows the original good stuff shop and preserved enhanced Build your shop copy; no Triump Ted text or motorbike stylesheet remains.
+
+## Revenue share paragraph update, 13 October
+
+- [x] Replace only the paragraph in the revenue share box with: “Your split starts at a 75% floor and is agreed with you before we build, based on your audience and niche. On brand deals we bring you, you keep at least 85%”. Preserve the revenue share heading, all other copy, links and styling. Save without publishing and leave the existing preview service running.
+
+Verified the website source differs only by the requested paragraph, TypeScript checks pass and the public preview renders the exact supplied wording.

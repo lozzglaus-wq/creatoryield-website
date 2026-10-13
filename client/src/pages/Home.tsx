@@ -520,9 +520,9 @@ export default function Home() {
                   <em>75%.</em>
                 </h3>
                 <p>
-                  Your exact split is agreed with you before we build, based on
-                  your channel. It never drops below 75%, and on brand deals we
-                  bring you, you keep at least 85%.
+                  Your split starts at a 75% floor and is agreed with you before
+                  we build, based on your audience and niche. On brand deals we
+                  bring you, you keep at least 85%
                 </p>
               </article>
             </div>
