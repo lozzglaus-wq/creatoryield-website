@@ -79,3 +79,9 @@ Verified the website source differs only by the requested paragraph, TypeScript 
 - [x] Replace only the paragraph beneath “Built to be managed” with the supplied wording, including: “Anything you land yourself stays entirely yours, and any paid links you already have, or get in future, can go straight on your shop with nothing taken by us.” Preserve all other wording, headings, styling and contact links. Save without publishing and keep the preview running.
 
 Verified the page differs only by the requested paragraph amendment, TypeScript checks pass and the new wording appears in the public preview.
+
+## Build paragraph update, 13 October
+
+- [x] Replace only the Build your shop paragraph with: “We turn the plan into a high quality website on your own domain, properly coded and designed around your channel and personality, so it feels like yours rather than a template. Every page makes browsing easy and helps Google understand and rank your site, with responsive layouts, clear structure and technical SEO from the start. Your recommendations get a permanent home that can attract visitors and earn on days you don't post.” Preserve the heading, all five tick points, styling and other website content. Save without publishing and keep the preview running.
+
+Verified only the build paragraph differs in the website source, TypeScript checks pass and the exact supplied wording appears in the public preview.

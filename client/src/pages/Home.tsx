@@ -57,7 +57,7 @@ const process = [
     number: "02",
     icon: Layers3,
     title: "Build\nyour shop.",
-    copy: "We turn the plan into a high quality website on your own domain, designed around your identity and properly coded. Every page makes browsing easy and helps Google understand your products, with responsive layouts, clear structure and technical SEO from the start. Your recommendations get a permanent home that can attract visitors and earn on days you don’t post.",
+    copy: "We turn the plan into a high quality website on your own domain, properly coded and designed around your channel and personality, so it feels like yours rather than a template. Every page makes browsing easy and helps Google understand and rank your site, with responsive layouts, clear structure and technical SEO from the start. Your recommendations get a permanent home that can attract visitors and earn on days you don't post.",
     points: [
       "Fast loading, properly coded pages",
       "Responsive on phone, tablet and desktop",
