@@ -369,7 +369,7 @@ export default function Home() {
                 </h2>
               </div>
               <p>
-                We do the research, build the shop and look after everything after. Where a brand runs an affiliate programme, we get you on it. Where they don't, or where we think you deserve a better rate, we go direct and negotiate. We keep every link live, swap in better deals and add new gear as you feature it. And we go out and knock on doors for you. We approach brands that fit your channel about paid partnerships and product deals, and we handle them from first email to signed agreement. On a brand deal we never take more than 15%, and you only ever share on deals we bring to you. Anything you land yourself stays entirely yours. You shape the plan and approve everything. Then you carry on creating.
+                We do the research, build the shop and look after everything after. Where a brand runs an affiliate programme, we get you on it. Where they don't, or where we think you deserve a better rate, we go direct and negotiate. We keep every link live, swap in better deals and add new gear as you feature it. And we go out and knock on doors for you. We approach brands that fit your channel about paid partnerships and product deals, and we handle them from first email to signed agreement. On a brand deal we never take more than 15%, and you only ever share on deals we bring to you. Anything you land yourself stays entirely yours, and any paid links you already have, or get in future, can go straight on your shop with nothing taken by us. You shape the plan and approve everything. Then you carry on creating.
               </p>
             </div>
             <div className="process-list">

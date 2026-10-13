@@ -73,3 +73,9 @@ Verified the restored shop, HTML head, Home.tsx and desktop/mobile styles match 
 - [x] Replace only the paragraph in the revenue share box with: “Your split starts at a 75% floor and is agreed with you before we build, based on your audience and niche. On brand deals we bring you, you keep at least 85%”. Preserve the revenue share heading, all other copy, links and styling. Save without publishing and leave the existing preview service running.
 
 Verified the website source differs only by the requested paragraph, TypeScript checks pass and the public preview renders the exact supplied wording.
+
+## Process paragraph update, 13 October
+
+- [x] Replace only the paragraph beneath “Built to be managed” with the supplied wording, including: “Anything you land yourself stays entirely yours, and any paid links you already have, or get in future, can go straight on your shop with nothing taken by us.” Preserve all other wording, headings, styling and contact links. Save without publishing and keep the preview running.
+
+Verified the page differs only by the requested paragraph amendment, TypeScript checks pass and the new wording appears in the public preview.
