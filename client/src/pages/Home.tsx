@@ -528,8 +528,11 @@ export default function Home() {
             </div>
             <div className="pricing-bottom">
               <p>
-                Small costs like your domain and hosting are set out clearly
-                before launch, so there are no surprises.
+                Because the site is yours, the domain and hosting are in your
+                name. We can set them up and manage them for you, with the small
+                yearly cost taken from your earnings at cost, or you can pay the
+                provider directly. Either way, everything is set out before
+                launch so there are no surprises.
               </p>
             </div>
           </div>
