@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://creatoryield.co.uk/sitemap.xml
