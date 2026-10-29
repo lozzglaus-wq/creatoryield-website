@@ -1104,6 +1104,7 @@ a:focus-visible {
 }
 .ownership-details > div > span {
   font-family: "Instrument Serif", Georgia, serif;
+  flex: 0 0 28px;
   color: #7e965b;
   font-size: 21px;
   line-height: 1.4;
@@ -1112,6 +1113,11 @@ a:focus-visible {
   font-size: 12px;
   line-height: 1.85;
   color: #909f82;
+}
+.ownership-details .ownership-note {
+  margin-top: 18px;
+  font-size: 11px;
+  font-style: italic;
 }
 .ownership-details strong {
   display: block;
