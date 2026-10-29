@@ -34,24 +34,32 @@ export default function ContactDialog({
     setStatus("sending");
     setError("");
     try {
-      const response = await fetch("/api/enquiries", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          requestId: requestId.current,
-          name: data.get("name"),
-          email: data.get("email"),
-          channelUrl: data.get("channelUrl"),
-          message: data.get("message"),
-          website: data.get("website"),
-          consent: data.get("consent") === "on",
-        }),
-      });
+      if (data.get("website")) {
+        setStatus("success");
+        return;
+      }
+      const response = await fetch(
+        "https://formsubmit.co/ajax/hello@creatoryield.co.uk",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            _subject: "New CreatorYield enquiry",
+            _captcha: "false",
+            _replyto: data.get("email"),
+            name: data.get("name"),
+            email: data.get("email"),
+            channel: data.get("channelUrl"),
+            message: data.get("message") || "(none)",
+          }),
+        }
+      );
       const result = await response.json();
-      if (!response.ok || !result.success)
-        throw new Error(
-          result.message || "We couldn’t send your enquiry. Please try again."
-        );
+      if (!response.ok || String(result.success) !== "true")
+        throw new Error("We couldn’t send your enquiry. Please try again.");
       setStatus("success");
     } catch (err) {
       setError(
