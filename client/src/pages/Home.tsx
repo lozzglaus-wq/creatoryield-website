@@ -427,7 +427,9 @@ export default function Home() {
                 <span>
                   CREATOR OWNED
                   <br />
-                  FROM DAY ONE
+                  WHEN YOU BUILD
+                  <br />
+                  WITH US
                 </span>
               </div>
             </div>
@@ -435,15 +437,15 @@ export default function Home() {
               <div>
                 <span>01</span>
                 <p>
-                  <strong>Your domain is in your name.</strong> Your shop, brand
-                  and site assets belong to you, not CreatorYield.
+                  <strong>Your domain is in your name.</strong> The domain,
+                  site, brand and content belong to you, not CreatorYield.
                 </p>
               </div>
               <div>
                 <span>02</span>
                 <p>
                   <strong>The website goes with you.</strong> If we stop working
-                  together, you keep the site and the assets you own. The
+                  together, you keep your site, domain and content. The
                   handover is covered in our agreement.
                 </p>
               </div>
@@ -463,6 +465,10 @@ export default function Home() {
                   build.
                 </p>
               </div>
+              <p className="ownership-note">
+                Ownership applies to the paid £300 build. Free builds are
+                offered on different terms, set out in your agreement.
+              </p>
             </div>
           </div>
         </section>
@@ -528,7 +534,7 @@ export default function Home() {
             </div>
             <div className="pricing-bottom">
               <p>
-                Because the site is yours, the domain and hosting are in your
+                Because the site is yours on the £300 build, the domain and hosting are in your
                 name. We can set them up and manage them for you, with the small
                 yearly cost taken from your earnings at cost, or you can pay the
                 provider directly. Either way, everything is set out before
